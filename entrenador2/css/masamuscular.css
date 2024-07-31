@@ -1,0 +1,225 @@
+body {
+    background-image: url('../img/training1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #282e5c;
+}
+
+.header {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #463daf;
+}
+
+.navigation a {
+    color: rgb(229, 226, 255);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: orange;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+.sign-in {
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.sign-in:hover {
+    background-color: #e03b3b;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #282e5c;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.text-section {
+    flex: 1;
+    padding: 50px;
+    color: rgb(227, 221, 255);
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.text-section h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.text-section p {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.text-section form div {
+    margin-bottom: 15px;
+}
+
+.text-section form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.text-section form input, 
+.text-section form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b7b4c9;
+    border-radius: 5px;
+}
+
+.text-section form select {
+    background-color: rgb(152, 148, 172);
+}
+
+.result-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: #cee5ff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.result-container.show {
+    max-height: 300px; /* Ajusta el tamaño según el contenido */
+    opacity: 1;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.result-table th, .result-table td {
+    border: 1px solid #27157a;
+    padding: 10px;
+    text-align: center;
+}
+
+.result-table th {
+    background-color: #5b47fb;
+    color: white;
+}
+
+.result-table td {
+    background-color: #eff3ff;
+}
+
+.result-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.result-table tr:hover {
+    background-color: #dddddd;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.button {
+    background-color: #ff6565;
+    color: white;
+    padding: 12px 30px;
+    margin-right: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #e03b3b;
+}
+
+.image-container {
+    flex: 1;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.image-container img {
+    margin-right: 10%;
+    margin-left: 20%;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 0 0 50px 50px;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.2em;
+    color: rgb(206, 201, 255);
+}
+
+.footer div {
+    margin: 0 0px;
+    margin-bottom: -20%;
+    text-align: center;
+}

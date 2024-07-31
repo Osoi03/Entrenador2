@@ -1,0 +1,26 @@
+@startuml cliente
+
+class LOGIN_CLIENTE {
+  - Nombre
+  - Password
+  * Entrar
+}
+
+class IMC {
+  - nombre
+  - altura
+  - peso
+  * Calcular
+}
+
+class IMM {
+  - altura
+  - peso
+  - Genero
+  * Calcular
+}
+
+LOGIN_CLIENTE --> IMC
+LOGIN_CLIENTE --> IMM
+
+@enduml

@@ -1,0 +1,164 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../img/training1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.container {
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.login-section, .image-section, .register-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-section, .register-section {
+    background-color: rgb(223, 217, 255);
+    flex: 1;
+}
+
+.login-form h2, .register-form h2 {
+    color: #5b47fb;
+    margin-bottom: 10px;
+}
+
+.login-form p, .register-form p {
+    color: #8579a8;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.login-btn, .register-btn {
+    background-color: #5b47fb;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover, .register-btn:hover {
+    background-color: #473bbf;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-login button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.google-login {
+    background-color: white;
+    color: #4285F4;
+}
+
+.google-login:hover {
+    background-color: #f0f0f0;
+}
+
+.facebook-login {
+    background-color: white;
+    color: #3b5998;
+}
+
+.facebook-login:hover {
+    background-color: #f0f0f0;
+}
+
+.image-section {
+    background-color: #e0e0ff;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Ocultar la sección de registro por defecto */
+.register-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.register-section.active {
+    display: block;
+    opacity: 1;
+}
+
+.no-account-btn,
+.back-to-login-btn {
+    margin-top: 15px;
+    background-color: transparent;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.no-account-btn:hover,
+.back-to-login-btn:hover {
+    color: darkblue;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    color: #555;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

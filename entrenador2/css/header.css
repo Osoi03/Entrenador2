@@ -1,0 +1,11 @@
+.header {
+    position: sticky; /* Hace que el header se quede en la parte superior mientras haces scroll */
+    top: 0; /* Posición superior del header */
+    width: 100%; /* El header ocupa el 100% del ancho */
+    display: flex; /* Utiliza flexbox para el layout del header */
+    justify-content: space-between; /* Distribuye el espacio uniformemente entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos dentro del header */
+    padding: 15px 50px; /* Padding interno del header */
+    background-color: #463daf; /* Color de fondo del header */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}

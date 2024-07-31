@@ -1,0 +1,158 @@
+/* Reusing your existing styles */
+body {
+    background-image: url('../img/training1.jpeg'); /* Imagen de fondo */
+    background-size: cover; /* La imagen de fondo cubre toda el área */
+    background-repeat: no-repeat; /* No repite la imagen de fondo */
+    background-position: center center; /* Centra la imagen de fondo */
+    margin: 0; /* Elimina el margen por defecto del body */
+    padding: 0; /* Elimina el padding por defecto del body */
+    font-family: Arial, sans-serif; /* Fuente de la página */
+    display: flex; /* Utiliza flexbox para el layout */
+    align-items: center; /* Centra verticalmente los elementos dentro del body */
+    min-height: 100vh; /* La altura mínima del body es igual a la altura de la ventana */
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+}
+
+.header {
+    position: sticky; /* Hace que el header se quede en la parte superior mientras haces scroll */
+    top: 0; /* Posición superior del header */
+    width: 100%; /* El header ocupa el 100% del ancho */
+    display: flex; /* Utiliza flexbox para el layout del header */
+    justify-content: space-between; /* Distribuye el espacio uniformemente entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos dentro del header */
+    padding: 15px 50px; /* Padding interno del header */
+    background-color: #463daf; /* Color de fondo del header */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+.navigation a {
+    color: white; /* Color del texto de los enlaces */
+    margin: 0 15px; /* Margen entre los enlaces */
+    text-decoration: none; /* Elimina la subrayado de los enlaces */
+    font-weight: bold; /* Texto en negrita para los enlaces */
+    position: relative; /* Necesario para el efecto hover */
+}
+
+.navigation a::after {
+    content: ''; /* Crea un contenido vacío después del enlace */
+    position: absolute; /* Posición absoluta para el pseudo-elemento */
+    width: 0; /* Ancho inicial del pseudo-elemento */
+    height: 2px; /* Altura del pseudo-elemento */
+    background: orange; /* Color de fondo del pseudo-elemento */
+    left: 0; /* Posición a la izquierda del enlace */
+    bottom: -5px; /* Posición justo debajo del enlace */
+    transition: width 0.3s; /* Transición suave del ancho */
+}
+
+.navigation a:hover::after {
+    width: 100%; /* Ancho completo al pasar el cursor */
+}
+
+.sign-in {
+    background-color: orange; /* Color de fondo del botón */
+    padding: 10px 20px; /* Padding interno del botón */
+    border-radius: 20px; /* Bordes redondeados del botón */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.sign-in:hover {
+    background-color: #e03b3b; /* Cambio de color al pasar el cursor */
+}
+
+.main-container {
+    display: flex; /* Utiliza flexbox para el layout del contenedor principal */
+    justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    margin: 155px auto; /* Margen superior e inferior y centra el contenedor */
+    width: 80%; /* Ancho del 80% del contenedor principal */
+    max-width: 1200px; /* Ancho máximo del contenedor principal */
+    background-color: #282e5c; /* Color de fondo del contenedor principal */
+    border-radius: 50px; /* Bordes redondeados del contenedor principal */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.text-section {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    padding: 50px; /* Padding interno de la sección de texto */
+    color: white; /* Color del texto */
+    animation: fadeInLeft 1s ease-in-out; /* Animación de entrada */
+}
+
+.text-section h1 {
+    font-size: 3em; /* Tamaño de fuente del encabezado */
+    margin: 0; /* Elimina el margen por defecto del encabezado */
+}
+
+.text-section p {
+    margin: 20px 0; /* Margen superior e inferior del párrafo */
+    font-size: 1.2em; /* Tamaño de fuente del párrafo */
+}
+
+.buttons {
+    margin-top: 30px; /* Margen superior de los botones */
+}
+
+.button {
+    background-color: #ff6565; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 12px 30px; /* Padding interno del botón */
+    margin-right: 20px; /* Margen derecho del botón */
+    border-radius: 30px; /* Bordes redondeados del botón */
+    text-decoration: none; /* Elimina la subrayado del enlace */
+    font-size: 1em; /* Tamaño de fuente del botón */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    display: inline-block; /* El botón se comporta como un elemento en línea con dimensiones de bloque */
+}
+
+.button:hover {
+    background-color: #e03b3b; /* Cambio de color al pasar el cursor */
+}
+
+.image-container {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    animation: fadeInRight 1s ease-in-out; /* Animación de entrada */
+}
+
+.image-container img {
+    margin: auto; /* Centra la imagen dentro del contenedor */
+    width: 100%; /* Ancho completo de la imagen */
+    max-width: 200px; /* Ancho máximo de la imagen */
+    border-radius: 0 0 50px 50px; /* Bordes redondeados en la parte inferior de la imagen */
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0; /* Comienza transparente */
+        transform: translateX(-50px); /* Comienza desplazado a la izquierda */
+    }
+    to {
+        opacity: 1; /* Termina completamente visible */
+        transform: translateX(0); /* Termina en su posición original */
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0; /* Comienza transparente */
+        transform: translateX(50px); /* Comienza desplazado a la derecha */
+    }
+    to {
+        opacity: 1; /* Termina completamente visible */
+        transform: translateX(0); /* Termina en su posición original */
+    }
+}
+
+.footer {
+    display: flex; /* Utiliza flexbox para el layout del footer */
+    justify-content: center; /* Centra horizontalmente los elementos dentro del footer */
+    align-items: center; /* Centra verticalmente los elementos dentro del footer */
+    padding: 20px; /* Padding interno del footer */
+    font-size: 1.2em; /* Tamaño de fuente del texto del footer */
+    color: white; /* Color del texto del footer */
+}
+
+.footer div {
+    margin: 0 40px; /* Margen horizontal entre los elementos del footer */
+    text-align: center; /* Alinea el texto al centro */
+}
